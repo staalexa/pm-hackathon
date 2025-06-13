@@ -14,19 +14,23 @@ st.sidebar.header('Filters')
 df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
 
 # Prepare filter options
-categories = ['All'] + sorted(df_issues['category'].dropna().unique().tolist())
-age_groups = ['All'] + sorted(df_issues['age_group'].dropna().unique().tolist())
-selected_category = st.sidebar.selectbox('Category', categories)
-selected_age = st.sidebar.selectbox('Age Group', age_groups)
+categories = sorted(df_issues['category'].dropna().unique().tolist())
+age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
 
-# Filter data
+# Use multiselect to allow multiple picks
+selected_categories = st.sidebar.multiselect('Category', options=['All'] + categories, default=['All'])
+selected_ages = st.sidebar.multiselect('Age Group', options=['All'] + age_groups, default=['All'])
+
+# Filter data based on selections
 filtered_issues = df_issues.copy()
-if selected_category != 'All':
-    filtered_issues = filtered_issues[filtered_issues['category'] == selected_category]
-if selected_age != 'All':
-    filtered_issues = filtered_issues[filtered_issues['age_group'] == selected_age]
+# Category filter
+if 'All' not in selected_categories:
+    filtered_issues = filtered_issues[filtered_issues['category'].isin(selected_categories)]
+# Age group filter
+if 'All' not in selected_ages:
+    filtered_issues = filtered_issues[filtered_issues['age_group'].isin(selected_ages)]
 
-# Define shapefile layers
+# Define shapefile layers\
 layers = {
     'Municipalities': {
         'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_GEM.shp',
@@ -50,12 +54,22 @@ m = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=Tr
 # Add world basemap
 folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(m)
 
-# Process each layer
+# Inject CSS once for full opacity
+st.markdown(
+    """
+<style>
+    * { opacity: 100% !important; }
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
+# Process each layer and add to map
 for layer_name, params in layers.items():
     # Load shapefile and reproject
     gdf = gpd.read_file(params['shp_path']).to_crs('EPSG:4326')
 
-    # Aggregate issue counts
+    # Aggregate issue counts by administrative unit
     count_df = (
         filtered_issues
         .groupby(params['issues_col'])
@@ -72,18 +86,18 @@ for layer_name, params in layers.items():
     )
     merged['issue_count'] = merged['issue_count'].fillna(0).astype(int)
 
-    # Drop datetime columns to avoid JSON errors
+    # Drop any datetime columns to avoid JSON serialization errors
     datetime_cols = merged.select_dtypes(include=['datetime64[ns]']).columns
     if len(datetime_cols) > 0:
         merged = merged.drop(columns=datetime_cols)
 
-    # Create the Choropleth layer and add to map
+    # Create the Choropleth layer
     choropleth = folium.Choropleth(
         geo_data=merged.to_json(),
         name=layer_name,
         data=merged,
         columns=[params['admin_col'], 'issue_count'],
-        key_on=f'feature.properties.{params["admin_col"]}',
+        key_on=f'feature.properties.{params['admin_col']}',
         fill_color='YlOrRd',
         fill_opacity=0.7,
         line_opacity=0.2,
@@ -93,13 +107,14 @@ for layer_name, params in layers.items():
         highlight=True
     ).add_to(m)
 
+    # Hide default choropleth legend
     m.get_root().html.add_child(folium.Element("""
       <style>
         .legend { display: none !important; }
       </style>
     """))
 
-    # Attach tooltip to the choropleth's GeoJson sub-layer
+    # Attach tooltip for interactivity
     choropleth.geojson.add_child(
         folium.GeoJsonTooltip(
             fields=[params['admin_col'], 'issue_count'],
@@ -107,17 +122,6 @@ for layer_name, params in layers.items():
             localize=True,
             sticky=False
         )
-    )
-
-    st.markdown(
-        """
-    <style>
-        * {
-            opacity: 100% !important;
-        }
-    </style>
-    """,
-        unsafe_allow_html=True,
     )
 
 # Add layer control
