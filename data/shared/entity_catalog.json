@@ -1,0 +1,3864 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created_at": "2025-06-13T03:18:54.144570",
+    "total_entities": 179,
+    "entities_by_level": {
+      "Bund": 16,
+      "Land": 160,
+      "Kreis": 1,
+      "Kommune": 1,
+      "Regierungsbezirk": 1
+    }
+  },
+  "entities": {
+    "BUND_BUNDESKANZLERAMT": {
+      "id": "BUND_BUNDESKANZLERAMT",
+      "name": "Bundeskanzleramt",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Allgemeine Verwaltung"
+      ],
+      "keywords": [
+        "Bundeskanzleramt",
+        "Allgemeine Verwaltung"
+      ],
+      "abbreviation": "B",
+      "official_website": null
+    },
+    "BUND_AUSWÄRTIGES_AMT": {
+      "id": "BUND_AUSWÄRTIGES_AMT",
+      "name": "Auswärtiges Amt",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Allgemeine Verwaltung"
+      ],
+      "keywords": [
+        "Allgemeine Verwaltung",
+        "Auswärtiges",
+        "Amt"
+      ],
+      "abbreviation": "AA",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_DES_INNERN_UND_FÜR_HEIMAT": {
+      "id": "BUND_BUNDESMINISTERIUM_DES_INNERN_UND_FÜR_HEIMAT",
+      "name": "Bundesministerium des Innern und für Heimat",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Migration",
+        "Verfassung"
+      ],
+      "keywords": [
+        "Ministerin",
+        "Heimat",
+        "Minister",
+        "Verfassung",
+        "Migration",
+        "Innern",
+        "des",
+        "und",
+        "für",
+        "Innere Sicherheit",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BIH",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_DER_JUSTIZ": {
+      "id": "BUND_BUNDESMINISTERIUM_DER_JUSTIZ",
+      "name": "Bundesministerium der Justiz",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Verbraucherschutz",
+        "Gerichte"
+      ],
+      "keywords": [
+        "Minister",
+        "Gerichte",
+        "der",
+        "Rechtswesen",
+        "Justiz",
+        "Ministerin",
+        "Verbraucherschutz",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BJ",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_DER_FINANZEN": {
+      "id": "BUND_BUNDESMINISTERIUM_DER_FINANZEN",
+      "name": "Bundesministerium der Finanzen",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Haushalt",
+        "Steuern",
+        "Zoll"
+      ],
+      "keywords": [
+        "Haushalt",
+        "Zoll",
+        "Minister",
+        "Bundesministerium",
+        "der",
+        "Finanzen",
+        "Ministerin",
+        "Steuern"
+      ],
+      "abbreviation": "BF",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFT_UND_KLIMASCHUTZ": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFT_UND_KLIMASCHUTZ",
+      "name": "Bundesministerium für Wirtschaft und Klimaschutz",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftspolitik",
+        "Energie",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Minister",
+        "Bundesministerium",
+        "Wirtschaft",
+        "und",
+        "Wirtschaftspolitik",
+        "für",
+        "Energie",
+        "Ministerin",
+        "Klimaschutz"
+      ],
+      "abbreviation": "BWK",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_ARBEIT_UND_SOZIALES": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_ARBEIT_UND_SOZIALES",
+      "name": "Bundesministerium für Arbeit und Soziales",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Arbeitsmarkt",
+        "Soziales",
+        "Rente"
+      ],
+      "keywords": [
+        "Ministerin",
+        "Minister",
+        "Soziales",
+        "Arbeitsmarkt",
+        "Rente",
+        "und",
+        "für",
+        "Arbeit",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BAS",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_DER_VERTEIDIGUNG": {
+      "id": "BUND_BUNDESMINISTERIUM_DER_VERTEIDIGUNG",
+      "name": "Bundesministerium der Verteidigung",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Bundeswehr",
+        "Zivilschutz"
+      ],
+      "keywords": [
+        "Minister",
+        "Bundeswehr",
+        "Verteidigung",
+        "der",
+        "Zivilschutz",
+        "Ministerin",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BV",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_ERNÄHRUNG_UND_LANDWIRTSCHAFT": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_ERNÄHRUNG_UND_LANDWIRTSCHAFT",
+      "name": "Bundesministerium für Ernährung und Landwirtschaft",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftspolitik",
+        "Energie",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "für",
+        "Landwirtschaft",
+        "Minister",
+        "und",
+        "Wirtschaftspolitik",
+        "Ernährung",
+        "Energie",
+        "Ministerin",
+        "Bundesministerium",
+        "Klimaschutz"
+      ],
+      "abbreviation": "BEL",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_FAMILIE,_SENIOREN,_FRAUEN_UND_JUGEND": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_FAMILIE,_SENIOREN,_FRAUEN_UND_JUGEND",
+      "name": "Bundesministerium für Familie, Senioren, Frauen und Jugend",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Familienpolitik",
+        "Jugend",
+        "Senioren"
+      ],
+      "keywords": [
+        "Familie,",
+        "Jugend",
+        "Minister",
+        "Frauen",
+        "Familienpolitik",
+        "Senioren",
+        "und",
+        "Senioren,",
+        "für",
+        "Ministerin",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BFSFJ",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_GESUNDHEIT": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_GESUNDHEIT",
+      "name": "Bundesministerium für Gesundheit",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Prävention",
+        "Pflege"
+      ],
+      "keywords": [
+        "Pflege",
+        "Minister",
+        "Prävention",
+        "Bundesministerium",
+        "für",
+        "Ministerin",
+        "Gesundheit",
+        "Gesundheitswesen"
+      ],
+      "abbreviation": "BG",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_DIGITALES_UND_VERKEHR": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_DIGITALES_UND_VERKEHR",
+      "name": "Bundesministerium für Digitales und Verkehr",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Infrastruktur",
+        "Mobilität",
+        "Digitales"
+      ],
+      "keywords": [
+        "Minister",
+        "Digitales",
+        "und",
+        "Mobilität",
+        "Infrastruktur",
+        "für",
+        "Verkehr",
+        "Ministerin",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BDV",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_UMWELT,_NATURSCHUTZ,_NUKLEARE_SICHERHEIT_UND_VERBRAUCHERSCHUTZ": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_UMWELT,_NATURSCHUTZ,_NUKLEARE_SICHERHEIT_UND_VERBRAUCHERSCHUTZ",
+      "name": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Verbraucherschutz"
+      ],
+      "keywords": [
+        "Naturschutz,",
+        "Umwelt,",
+        "Naturschutz",
+        "Minister",
+        "Sicherheit",
+        "Umweltschutz",
+        "und",
+        "nukleare",
+        "für",
+        "Ministerin",
+        "Verbraucherschutz",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BUNSV",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_BILDUNG_UND_FORSCHUNG": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_BILDUNG_UND_FORSCHUNG",
+      "name": "Bundesministerium für Bildung und Forschung",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Bildungspolitik",
+        "Forschung",
+        "Wissenschaft"
+      ],
+      "keywords": [
+        "Wissenschaft",
+        "Minister",
+        "Forschung",
+        "und",
+        "Bildung",
+        "Bildungspolitik",
+        "für",
+        "Ministerin",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BBF",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFTLICHE_ZUSAMMENARBEIT_UND_ENTWICKLUNG": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFTLICHE_ZUSAMMENARBEIT_UND_ENTWICKLUNG",
+      "name": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftspolitik",
+        "Energie",
+        "Klimaschutz",
+        "Arbeitsmarkt",
+        "Soziales",
+        "Rente"
+      ],
+      "keywords": [
+        "wirtschaftliche",
+        "Minister",
+        "Arbeitsmarkt",
+        "Zusammenarbeit",
+        "Soziales",
+        "Rente",
+        "und",
+        "Wirtschaftspolitik",
+        "für",
+        "Energie",
+        "Ministerin",
+        "Bundesministerium",
+        "Klimaschutz",
+        "Entwicklung"
+      ],
+      "abbreviation": "BZE",
+      "official_website": null
+    },
+    "BUND_BUNDESMINISTERIUM_FÜR_WOHNEN,_STADTENTWICKLUNG_UND_BAUWESEN": {
+      "id": "BUND_BUNDESMINISTERIUM_FÜR_WOHNEN,_STADTENTWICKLUNG_UND_BAUWESEN",
+      "name": "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen",
+      "level": "Bund",
+      "state": null,
+      "parent_id": null,
+      "competencies": [
+        "Allgemeine Verwaltung"
+      ],
+      "keywords": [
+        "Minister",
+        "Wohnen,",
+        "und",
+        "Stadtentwicklung",
+        "Bauwesen",
+        "für",
+        "Ministerin",
+        "Allgemeine Verwaltung",
+        "Bundesministerium"
+      ],
+      "abbreviation": "BWSB",
+      "official_website": null
+    },
+    "LAND_01_SK": {
+      "id": "LAND_01_SK",
+      "name": "Schleswig-Holstein - Staatskanzlei",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_01_IM": {
+      "id": "LAND_01_IM",
+      "name": "Schleswig-Holstein - Ministerium des Innern",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_01_FM": {
+      "id": "LAND_01_FM",
+      "name": "Schleswig-Holstein - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_01_BM": {
+      "id": "LAND_01_BM",
+      "name": "Schleswig-Holstein - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_01_MW": {
+      "id": "LAND_01_MW",
+      "name": "Schleswig-Holstein - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_01_UM": {
+      "id": "LAND_01_UM",
+      "name": "Schleswig-Holstein - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_01_GM": {
+      "id": "LAND_01_GM",
+      "name": "Schleswig-Holstein - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_01_VM": {
+      "id": "LAND_01_VM",
+      "name": "Schleswig-Holstein - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_01_SM": {
+      "id": "LAND_01_SM",
+      "name": "Schleswig-Holstein - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_01_JM": {
+      "id": "LAND_01_JM",
+      "name": "Schleswig-Holstein - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Schleswig-Holstein",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_02_SK": {
+      "id": "LAND_02_SK",
+      "name": "Hamburg - Staatskanzlei",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_02_IM": {
+      "id": "LAND_02_IM",
+      "name": "Hamburg - Ministerium des Innern",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_02_FM": {
+      "id": "LAND_02_FM",
+      "name": "Hamburg - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_02_BM": {
+      "id": "LAND_02_BM",
+      "name": "Hamburg - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_02_MW": {
+      "id": "LAND_02_MW",
+      "name": "Hamburg - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_02_UM": {
+      "id": "LAND_02_UM",
+      "name": "Hamburg - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_02_GM": {
+      "id": "LAND_02_GM",
+      "name": "Hamburg - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_02_VM": {
+      "id": "LAND_02_VM",
+      "name": "Hamburg - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_02_SM": {
+      "id": "LAND_02_SM",
+      "name": "Hamburg - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_02_JM": {
+      "id": "LAND_02_JM",
+      "name": "Hamburg - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Hamburg",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_03_SK": {
+      "id": "LAND_03_SK",
+      "name": "Niedersachsen - Staatskanzlei",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_03_IM": {
+      "id": "LAND_03_IM",
+      "name": "Niedersachsen - Ministerium des Innern",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_03_FM": {
+      "id": "LAND_03_FM",
+      "name": "Niedersachsen - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_03_BM": {
+      "id": "LAND_03_BM",
+      "name": "Niedersachsen - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_03_MW": {
+      "id": "LAND_03_MW",
+      "name": "Niedersachsen - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_03_UM": {
+      "id": "LAND_03_UM",
+      "name": "Niedersachsen - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_03_GM": {
+      "id": "LAND_03_GM",
+      "name": "Niedersachsen - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_03_VM": {
+      "id": "LAND_03_VM",
+      "name": "Niedersachsen - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_03_SM": {
+      "id": "LAND_03_SM",
+      "name": "Niedersachsen - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_03_JM": {
+      "id": "LAND_03_JM",
+      "name": "Niedersachsen - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Niedersachsen",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_04_SK": {
+      "id": "LAND_04_SK",
+      "name": "Bremen - Staatskanzlei",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_04_IM": {
+      "id": "LAND_04_IM",
+      "name": "Bremen - Ministerium des Innern",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_04_FM": {
+      "id": "LAND_04_FM",
+      "name": "Bremen - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_04_BM": {
+      "id": "LAND_04_BM",
+      "name": "Bremen - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_04_MW": {
+      "id": "LAND_04_MW",
+      "name": "Bremen - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_04_UM": {
+      "id": "LAND_04_UM",
+      "name": "Bremen - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_04_GM": {
+      "id": "LAND_04_GM",
+      "name": "Bremen - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_04_VM": {
+      "id": "LAND_04_VM",
+      "name": "Bremen - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_04_SM": {
+      "id": "LAND_04_SM",
+      "name": "Bremen - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_04_JM": {
+      "id": "LAND_04_JM",
+      "name": "Bremen - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Bremen",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_05_SK": {
+      "id": "LAND_05_SK",
+      "name": "Nordrhein-Westfalen - Staatskanzlei",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_05_IM": {
+      "id": "LAND_05_IM",
+      "name": "Nordrhein-Westfalen - Ministerium des Innern",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_05_FM": {
+      "id": "LAND_05_FM",
+      "name": "Nordrhein-Westfalen - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_05_BM": {
+      "id": "LAND_05_BM",
+      "name": "Nordrhein-Westfalen - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_05_MW": {
+      "id": "LAND_05_MW",
+      "name": "Nordrhein-Westfalen - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_05_UM": {
+      "id": "LAND_05_UM",
+      "name": "Nordrhein-Westfalen - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_05_GM": {
+      "id": "LAND_05_GM",
+      "name": "Nordrhein-Westfalen - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_05_VM": {
+      "id": "LAND_05_VM",
+      "name": "Nordrhein-Westfalen - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_05_SM": {
+      "id": "LAND_05_SM",
+      "name": "Nordrhein-Westfalen - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_05_JM": {
+      "id": "LAND_05_JM",
+      "name": "Nordrhein-Westfalen - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Nordrhein-Westfalen",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_06_SK": {
+      "id": "LAND_06_SK",
+      "name": "Hessen - Staatskanzlei",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_06_IM": {
+      "id": "LAND_06_IM",
+      "name": "Hessen - Ministerium des Innern",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_06_FM": {
+      "id": "LAND_06_FM",
+      "name": "Hessen - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_06_BM": {
+      "id": "LAND_06_BM",
+      "name": "Hessen - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_06_MW": {
+      "id": "LAND_06_MW",
+      "name": "Hessen - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_06_UM": {
+      "id": "LAND_06_UM",
+      "name": "Hessen - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_06_GM": {
+      "id": "LAND_06_GM",
+      "name": "Hessen - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_06_VM": {
+      "id": "LAND_06_VM",
+      "name": "Hessen - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_06_SM": {
+      "id": "LAND_06_SM",
+      "name": "Hessen - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_06_JM": {
+      "id": "LAND_06_JM",
+      "name": "Hessen - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Hessen",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_07_SK": {
+      "id": "LAND_07_SK",
+      "name": "Rheinland-Pfalz - Staatskanzlei",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_07_IM": {
+      "id": "LAND_07_IM",
+      "name": "Rheinland-Pfalz - Ministerium des Innern",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_07_FM": {
+      "id": "LAND_07_FM",
+      "name": "Rheinland-Pfalz - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_07_BM": {
+      "id": "LAND_07_BM",
+      "name": "Rheinland-Pfalz - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_07_MW": {
+      "id": "LAND_07_MW",
+      "name": "Rheinland-Pfalz - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_07_UM": {
+      "id": "LAND_07_UM",
+      "name": "Rheinland-Pfalz - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_07_GM": {
+      "id": "LAND_07_GM",
+      "name": "Rheinland-Pfalz - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_07_VM": {
+      "id": "LAND_07_VM",
+      "name": "Rheinland-Pfalz - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_07_SM": {
+      "id": "LAND_07_SM",
+      "name": "Rheinland-Pfalz - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_07_JM": {
+      "id": "LAND_07_JM",
+      "name": "Rheinland-Pfalz - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Rheinland-Pfalz",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_08_SK": {
+      "id": "LAND_08_SK",
+      "name": "Baden-Württemberg - Staatskanzlei",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_08_IM": {
+      "id": "LAND_08_IM",
+      "name": "Baden-Württemberg - Ministerium des Innern",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_08_FM": {
+      "id": "LAND_08_FM",
+      "name": "Baden-Württemberg - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_08_BM": {
+      "id": "LAND_08_BM",
+      "name": "Baden-Württemberg - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_08_MW": {
+      "id": "LAND_08_MW",
+      "name": "Baden-Württemberg - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_08_UM": {
+      "id": "LAND_08_UM",
+      "name": "Baden-Württemberg - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_08_GM": {
+      "id": "LAND_08_GM",
+      "name": "Baden-Württemberg - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_08_VM": {
+      "id": "LAND_08_VM",
+      "name": "Baden-Württemberg - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_08_SM": {
+      "id": "LAND_08_SM",
+      "name": "Baden-Württemberg - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_08_JM": {
+      "id": "LAND_08_JM",
+      "name": "Baden-Württemberg - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Baden-Württemberg",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_09_SK": {
+      "id": "LAND_09_SK",
+      "name": "Bayern - Staatskanzlei",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_09_IM": {
+      "id": "LAND_09_IM",
+      "name": "Bayern - Ministerium des Innern",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_09_FM": {
+      "id": "LAND_09_FM",
+      "name": "Bayern - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_09_BM": {
+      "id": "LAND_09_BM",
+      "name": "Bayern - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_09_MW": {
+      "id": "LAND_09_MW",
+      "name": "Bayern - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_09_UM": {
+      "id": "LAND_09_UM",
+      "name": "Bayern - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_09_GM": {
+      "id": "LAND_09_GM",
+      "name": "Bayern - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_09_VM": {
+      "id": "LAND_09_VM",
+      "name": "Bayern - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_09_SM": {
+      "id": "LAND_09_SM",
+      "name": "Bayern - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_09_JM": {
+      "id": "LAND_09_JM",
+      "name": "Bayern - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Bayern",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_10_SK": {
+      "id": "LAND_10_SK",
+      "name": "Saarland - Staatskanzlei",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_10_IM": {
+      "id": "LAND_10_IM",
+      "name": "Saarland - Ministerium des Innern",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_10_FM": {
+      "id": "LAND_10_FM",
+      "name": "Saarland - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_10_BM": {
+      "id": "LAND_10_BM",
+      "name": "Saarland - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_10_MW": {
+      "id": "LAND_10_MW",
+      "name": "Saarland - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_10_UM": {
+      "id": "LAND_10_UM",
+      "name": "Saarland - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_10_GM": {
+      "id": "LAND_10_GM",
+      "name": "Saarland - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_10_VM": {
+      "id": "LAND_10_VM",
+      "name": "Saarland - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_10_SM": {
+      "id": "LAND_10_SM",
+      "name": "Saarland - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_10_JM": {
+      "id": "LAND_10_JM",
+      "name": "Saarland - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Saarland",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_11_SK": {
+      "id": "LAND_11_SK",
+      "name": "Berlin - Staatskanzlei",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_11_IM": {
+      "id": "LAND_11_IM",
+      "name": "Berlin - Ministerium des Innern",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_11_FM": {
+      "id": "LAND_11_FM",
+      "name": "Berlin - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_11_BM": {
+      "id": "LAND_11_BM",
+      "name": "Berlin - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_11_MW": {
+      "id": "LAND_11_MW",
+      "name": "Berlin - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_11_UM": {
+      "id": "LAND_11_UM",
+      "name": "Berlin - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_11_GM": {
+      "id": "LAND_11_GM",
+      "name": "Berlin - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_11_VM": {
+      "id": "LAND_11_VM",
+      "name": "Berlin - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_11_SM": {
+      "id": "LAND_11_SM",
+      "name": "Berlin - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_11_JM": {
+      "id": "LAND_11_JM",
+      "name": "Berlin - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Berlin",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_12_SK": {
+      "id": "LAND_12_SK",
+      "name": "Brandenburg - Staatskanzlei",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_12_IM": {
+      "id": "LAND_12_IM",
+      "name": "Brandenburg - Ministerium des Innern",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_12_FM": {
+      "id": "LAND_12_FM",
+      "name": "Brandenburg - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_12_BM": {
+      "id": "LAND_12_BM",
+      "name": "Brandenburg - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_12_MW": {
+      "id": "LAND_12_MW",
+      "name": "Brandenburg - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_12_UM": {
+      "id": "LAND_12_UM",
+      "name": "Brandenburg - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_12_GM": {
+      "id": "LAND_12_GM",
+      "name": "Brandenburg - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_12_VM": {
+      "id": "LAND_12_VM",
+      "name": "Brandenburg - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_12_SM": {
+      "id": "LAND_12_SM",
+      "name": "Brandenburg - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_12_JM": {
+      "id": "LAND_12_JM",
+      "name": "Brandenburg - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Brandenburg",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_13_SK": {
+      "id": "LAND_13_SK",
+      "name": "Mecklenburg-Vorpommern - Staatskanzlei",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_13_IM": {
+      "id": "LAND_13_IM",
+      "name": "Mecklenburg-Vorpommern - Ministerium des Innern",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_13_FM": {
+      "id": "LAND_13_FM",
+      "name": "Mecklenburg-Vorpommern - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_13_BM": {
+      "id": "LAND_13_BM",
+      "name": "Mecklenburg-Vorpommern - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_13_MW": {
+      "id": "LAND_13_MW",
+      "name": "Mecklenburg-Vorpommern - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_13_UM": {
+      "id": "LAND_13_UM",
+      "name": "Mecklenburg-Vorpommern - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_13_GM": {
+      "id": "LAND_13_GM",
+      "name": "Mecklenburg-Vorpommern - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_13_VM": {
+      "id": "LAND_13_VM",
+      "name": "Mecklenburg-Vorpommern - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_13_SM": {
+      "id": "LAND_13_SM",
+      "name": "Mecklenburg-Vorpommern - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_13_JM": {
+      "id": "LAND_13_JM",
+      "name": "Mecklenburg-Vorpommern - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Mecklenburg-Vorpommern",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_14_SK": {
+      "id": "LAND_14_SK",
+      "name": "Sachsen - Staatskanzlei",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_14_IM": {
+      "id": "LAND_14_IM",
+      "name": "Sachsen - Ministerium des Innern",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_14_FM": {
+      "id": "LAND_14_FM",
+      "name": "Sachsen - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_14_BM": {
+      "id": "LAND_14_BM",
+      "name": "Sachsen - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_14_MW": {
+      "id": "LAND_14_MW",
+      "name": "Sachsen - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_14_UM": {
+      "id": "LAND_14_UM",
+      "name": "Sachsen - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_14_GM": {
+      "id": "LAND_14_GM",
+      "name": "Sachsen - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_14_VM": {
+      "id": "LAND_14_VM",
+      "name": "Sachsen - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_14_SM": {
+      "id": "LAND_14_SM",
+      "name": "Sachsen - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_14_JM": {
+      "id": "LAND_14_JM",
+      "name": "Sachsen - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Sachsen",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_15_SK": {
+      "id": "LAND_15_SK",
+      "name": "Sachsen-Anhalt - Staatskanzlei",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_15_IM": {
+      "id": "LAND_15_IM",
+      "name": "Sachsen-Anhalt - Ministerium des Innern",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_15_FM": {
+      "id": "LAND_15_FM",
+      "name": "Sachsen-Anhalt - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_15_BM": {
+      "id": "LAND_15_BM",
+      "name": "Sachsen-Anhalt - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_15_MW": {
+      "id": "LAND_15_MW",
+      "name": "Sachsen-Anhalt - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_15_UM": {
+      "id": "LAND_15_UM",
+      "name": "Sachsen-Anhalt - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_15_GM": {
+      "id": "LAND_15_GM",
+      "name": "Sachsen-Anhalt - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_15_VM": {
+      "id": "LAND_15_VM",
+      "name": "Sachsen-Anhalt - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_15_SM": {
+      "id": "LAND_15_SM",
+      "name": "Sachsen-Anhalt - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_15_JM": {
+      "id": "LAND_15_JM",
+      "name": "Sachsen-Anhalt - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Sachsen-Anhalt",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "LAND_16_SK": {
+      "id": "LAND_16_SK",
+      "name": "Thüringen - Staatskanzlei",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Regierungskoordination",
+        "Medienpolitik",
+        "Bundesangelegenheiten"
+      ],
+      "keywords": [
+        "Ministerpräsident",
+        "Regierung",
+        "Koordination"
+      ],
+      "abbreviation": "SK",
+      "official_website": null
+    },
+    "LAND_16_IM": {
+      "id": "LAND_16_IM",
+      "name": "Thüringen - Ministerium des Innern",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Innere Sicherheit",
+        "Kommunalaufsicht",
+        "Verfassungsschutz"
+      ],
+      "keywords": [
+        "Polizei",
+        "Sicherheit",
+        "Ordnung",
+        "Kommunen"
+      ],
+      "abbreviation": "IM",
+      "official_website": null
+    },
+    "LAND_16_FM": {
+      "id": "LAND_16_FM",
+      "name": "Thüringen - Ministerium der Finanzen",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Landeshaushalt",
+        "Steuern",
+        "Finanzpolitik"
+      ],
+      "keywords": [
+        "Finanzen",
+        "Haushalt",
+        "Steuern",
+        "Budget"
+      ],
+      "abbreviation": "FM",
+      "official_website": null
+    },
+    "LAND_16_BM": {
+      "id": "LAND_16_BM",
+      "name": "Thüringen - Ministerium für Bildung",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Schulbildung",
+        "Hochschulen",
+        "Ausbildung"
+      ],
+      "keywords": [
+        "Schule",
+        "Universität",
+        "Bildung",
+        "Lehrer"
+      ],
+      "abbreviation": "BM",
+      "official_website": null
+    },
+    "LAND_16_MW": {
+      "id": "LAND_16_MW",
+      "name": "Thüringen - Ministerium für Wirtschaft",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Wirtschaftsförderung",
+        "Arbeitsmarkt",
+        "Energie"
+      ],
+      "keywords": [
+        "Wirtschaft",
+        "Unternehmen",
+        "Arbeit",
+        "Energie"
+      ],
+      "abbreviation": "MW",
+      "official_website": null
+    },
+    "LAND_16_UM": {
+      "id": "LAND_16_UM",
+      "name": "Thüringen - Ministerium für Umwelt",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Umweltschutz",
+        "Naturschutz",
+        "Klimaschutz"
+      ],
+      "keywords": [
+        "Umwelt",
+        "Klima",
+        "Natur",
+        "Nachhaltigkeit"
+      ],
+      "abbreviation": "UM",
+      "official_website": null
+    },
+    "LAND_16_GM": {
+      "id": "LAND_16_GM",
+      "name": "Thüringen - Ministerium für Gesundheit",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Gesundheitswesen",
+        "Krankenhäuser",
+        "Pflege"
+      ],
+      "keywords": [
+        "Gesundheit",
+        "Krankenhaus",
+        "Pflege",
+        "Medizin"
+      ],
+      "abbreviation": "GM",
+      "official_website": null
+    },
+    "LAND_16_VM": {
+      "id": "LAND_16_VM",
+      "name": "Thüringen - Ministerium für Verkehr",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Straßenbau",
+        "ÖPNV",
+        "Verkehrsinfrastruktur"
+      ],
+      "keywords": [
+        "Verkehr",
+        "Straße",
+        "Bahn",
+        "Mobilität"
+      ],
+      "abbreviation": "VM",
+      "official_website": null
+    },
+    "LAND_16_SM": {
+      "id": "LAND_16_SM",
+      "name": "Thüringen - Ministerium für Soziales",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Sozialleistungen",
+        "Familie",
+        "Integration"
+      ],
+      "keywords": [
+        "Soziales",
+        "Familie",
+        "Integration",
+        "Jugend"
+      ],
+      "abbreviation": "SM",
+      "official_website": null
+    },
+    "LAND_16_JM": {
+      "id": "LAND_16_JM",
+      "name": "Thüringen - Ministerium der Justiz",
+      "level": "Land",
+      "state": "Thüringen",
+      "parent_id": null,
+      "competencies": [
+        "Rechtswesen",
+        "Gerichte",
+        "Strafvollzug"
+      ],
+      "keywords": [
+        "Justiz",
+        "Recht",
+        "Gericht",
+        "Gesetz"
+      ],
+      "abbreviation": "JM",
+      "official_website": null
+    },
+    "KREIS_": {
+      "id": "KREIS_",
+      "name": "Landkreis Altenburger Land",
+      "level": "Kreis",
+      "state": null,
+      "parent_id": "LAND__MAIN",
+      "competencies": [
+        "Lokalverwaltung",
+        "Kreisangelegenheiten"
+      ],
+      "keywords": [
+        "Kreisverwaltung",
+        "Landratsamt",
+        "Altenburger Land"
+      ],
+      "abbreviation": null,
+      "official_website": null
+    },
+    "RBZ_": {
+      "id": "RBZ_",
+      "name": "Regierungsbezirk Schwaben",
+      "level": "Regierungsbezirk",
+      "state": null,
+      "parent_id": "LAND__MAIN",
+      "competencies": [
+        "Mittelverwaltung",
+        "Aufsichtsbehörde"
+      ],
+      "keywords": [
+        "Bezirksregierung",
+        "Regierungspräsidium",
+        "Schwaben"
+      ],
+      "abbreviation": null,
+      "official_website": null
+    },
+    "KOMMUNE_": {
+      "id": "KOMMUNE_",
+      "name": "Offenbach am Main",
+      "level": "Kommune",
+      "state": null,
+      "parent_id": "KREIS_",
+      "competencies": [
+        "Kommunalverwaltung",
+        "Bürgerdienste",
+        "Lokale Angelegenheiten"
+      ],
+      "keywords": [
+        "Stadtverwaltung",
+        "Rathaus",
+        "Bürgeramt",
+        "Offenbach am Main"
+      ],
+      "abbreviation": null,
+      "official_website": null
+    }
+  },
+  "category_entity_map": {
+    "Verkehr": [
+      "BUND_BUNDESMINISTERIUM_FÜR_DIGITALES_UND_VERKEHR",
+      "LAND_01_VM",
+      "LAND_02_VM",
+      "LAND_03_VM",
+      "LAND_04_VM",
+      "LAND_05_VM",
+      "LAND_06_VM",
+      "LAND_07_VM",
+      "LAND_08_VM",
+      "LAND_09_VM",
+      "LAND_10_VM",
+      "LAND_11_VM",
+      "LAND_12_VM",
+      "LAND_13_VM",
+      "LAND_14_VM",
+      "LAND_15_VM",
+      "LAND_16_VM"
+    ],
+    "Bildung": [
+      "BUND_BUNDESMINISTERIUM_FÜR_BILDUNG_UND_FORSCHUNG",
+      "LAND_01_BM",
+      "LAND_02_BM",
+      "LAND_03_BM",
+      "LAND_04_BM",
+      "LAND_05_BM",
+      "LAND_06_BM",
+      "LAND_07_BM",
+      "LAND_08_BM",
+      "LAND_09_BM",
+      "LAND_10_BM",
+      "LAND_11_BM",
+      "LAND_12_BM",
+      "LAND_13_BM",
+      "LAND_14_BM",
+      "LAND_15_BM",
+      "LAND_16_BM"
+    ],
+    "Migration": [
+      "BUND_BUNDESMINISTERIUM_DES_INNERN_UND_FÜR_HEIMAT",
+      "LAND_01_SM",
+      "LAND_02_SM",
+      "LAND_03_SM",
+      "LAND_04_SM",
+      "LAND_05_SM",
+      "LAND_06_SM",
+      "LAND_07_SM",
+      "LAND_08_SM",
+      "LAND_09_SM",
+      "LAND_10_SM",
+      "LAND_11_SM",
+      "LAND_12_SM",
+      "LAND_13_SM",
+      "LAND_14_SM",
+      "LAND_15_SM",
+      "LAND_16_SM"
+    ],
+    "Umwelt": [
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFT_UND_KLIMASCHUTZ",
+      "BUND_BUNDESMINISTERIUM_FÜR_ERNÄHRUNG_UND_LANDWIRTSCHAFT",
+      "BUND_BUNDESMINISTERIUM_FÜR_UMWELT,_NATURSCHUTZ,_NUKLEARE_SICHERHEIT_UND_VERBRAUCHERSCHUTZ",
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFTLICHE_ZUSAMMENARBEIT_UND_ENTWICKLUNG",
+      "LAND_01_MW",
+      "LAND_01_UM",
+      "LAND_02_MW",
+      "LAND_02_UM",
+      "LAND_03_MW",
+      "LAND_03_UM",
+      "LAND_04_MW",
+      "LAND_04_UM",
+      "LAND_05_MW",
+      "LAND_05_UM",
+      "LAND_06_MW",
+      "LAND_06_UM",
+      "LAND_07_MW",
+      "LAND_07_UM",
+      "LAND_08_MW",
+      "LAND_08_UM",
+      "LAND_09_MW",
+      "LAND_09_UM",
+      "LAND_10_MW",
+      "LAND_10_UM",
+      "LAND_11_MW",
+      "LAND_11_UM",
+      "LAND_12_MW",
+      "LAND_12_UM",
+      "LAND_13_MW",
+      "LAND_13_UM",
+      "LAND_14_MW",
+      "LAND_14_UM",
+      "LAND_15_MW",
+      "LAND_15_UM",
+      "LAND_16_MW",
+      "LAND_16_UM"
+    ],
+    "Gesundheit": [
+      "BUND_BUNDESMINISTERIUM_FÜR_ARBEIT_UND_SOZIALES",
+      "BUND_BUNDESMINISTERIUM_FÜR_GESUNDHEIT",
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFTLICHE_ZUSAMMENARBEIT_UND_ENTWICKLUNG",
+      "LAND_01_GM",
+      "LAND_01_SM",
+      "LAND_02_GM",
+      "LAND_02_SM",
+      "LAND_03_GM",
+      "LAND_03_SM",
+      "LAND_04_GM",
+      "LAND_04_SM",
+      "LAND_05_GM",
+      "LAND_05_SM",
+      "LAND_06_GM",
+      "LAND_06_SM",
+      "LAND_07_GM",
+      "LAND_07_SM",
+      "LAND_08_GM",
+      "LAND_08_SM",
+      "LAND_09_GM",
+      "LAND_09_SM",
+      "LAND_10_GM",
+      "LAND_10_SM",
+      "LAND_11_GM",
+      "LAND_11_SM",
+      "LAND_12_GM",
+      "LAND_12_SM",
+      "LAND_13_GM",
+      "LAND_13_SM",
+      "LAND_14_GM",
+      "LAND_14_SM",
+      "LAND_15_GM",
+      "LAND_15_SM",
+      "LAND_16_GM",
+      "LAND_16_SM"
+    ],
+    "Wirtschaft": [
+      "BUND_BUNDESMINISTERIUM_DER_FINANZEN",
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFT_UND_KLIMASCHUTZ",
+      "BUND_BUNDESMINISTERIUM_FÜR_ARBEIT_UND_SOZIALES",
+      "BUND_BUNDESMINISTERIUM_FÜR_ERNÄHRUNG_UND_LANDWIRTSCHAFT",
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFTLICHE_ZUSAMMENARBEIT_UND_ENTWICKLUNG",
+      "LAND_01_FM",
+      "LAND_01_MW",
+      "LAND_02_FM",
+      "LAND_02_MW",
+      "LAND_03_FM",
+      "LAND_03_MW",
+      "LAND_04_FM",
+      "LAND_04_MW",
+      "LAND_05_FM",
+      "LAND_05_MW",
+      "LAND_06_FM",
+      "LAND_06_MW",
+      "LAND_07_FM",
+      "LAND_07_MW",
+      "LAND_08_FM",
+      "LAND_08_MW",
+      "LAND_09_FM",
+      "LAND_09_MW",
+      "LAND_10_FM",
+      "LAND_10_MW",
+      "LAND_11_FM",
+      "LAND_11_MW",
+      "LAND_12_FM",
+      "LAND_12_MW",
+      "LAND_13_FM",
+      "LAND_13_MW",
+      "LAND_14_FM",
+      "LAND_14_MW",
+      "LAND_15_FM",
+      "LAND_15_MW",
+      "LAND_16_FM",
+      "LAND_16_MW"
+    ],
+    "Digitalisierung": [
+      "BUND_BUNDESMINISTERIUM_FÜR_DIGITALES_UND_VERKEHR"
+    ],
+    "Sicherheit": [
+      "BUND_BUNDESMINISTERIUM_DES_INNERN_UND_FÜR_HEIMAT",
+      "BUND_BUNDESMINISTERIUM_DER_JUSTIZ",
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFT_UND_KLIMASCHUTZ",
+      "BUND_BUNDESMINISTERIUM_DER_VERTEIDIGUNG",
+      "BUND_BUNDESMINISTERIUM_FÜR_ERNÄHRUNG_UND_LANDWIRTSCHAFT",
+      "BUND_BUNDESMINISTERIUM_FÜR_UMWELT,_NATURSCHUTZ,_NUKLEARE_SICHERHEIT_UND_VERBRAUCHERSCHUTZ",
+      "BUND_BUNDESMINISTERIUM_FÜR_WIRTSCHAFTLICHE_ZUSAMMENARBEIT_UND_ENTWICKLUNG",
+      "LAND_01_IM",
+      "LAND_01_UM",
+      "LAND_02_IM",
+      "LAND_02_UM",
+      "LAND_03_IM",
+      "LAND_03_UM",
+      "LAND_04_IM",
+      "LAND_04_UM",
+      "LAND_05_IM",
+      "LAND_05_UM",
+      "LAND_06_IM",
+      "LAND_06_UM",
+      "LAND_07_IM",
+      "LAND_07_UM",
+      "LAND_08_IM",
+      "LAND_08_UM",
+      "LAND_09_IM",
+      "LAND_09_UM",
+      "LAND_10_IM",
+      "LAND_10_UM",
+      "LAND_11_IM",
+      "LAND_11_UM",
+      "LAND_12_IM",
+      "LAND_12_UM",
+      "LAND_13_IM",
+      "LAND_13_UM",
+      "LAND_14_IM",
+      "LAND_14_UM",
+      "LAND_15_IM",
+      "LAND_15_UM",
+      "LAND_16_IM",
+      "LAND_16_UM"
+    ]
+  }
+}

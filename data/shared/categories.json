@@ -1,0 +1,22 @@
+{
+  "categories": [
+    "Verkehr",
+    "Bildung",
+    "Migration",
+    "Umwelt",
+    "Gesundheit",
+    "Wirtschaft",
+    "Digitalisierung",
+    "Sicherheit"
+  ],
+  "descriptions": {
+    "Verkehr": "Traffic and transportation issues",
+    "Bildung": "Education-related concerns",
+    "Migration": "Immigration and integration topics",
+    "Umwelt": "Environmental issues",
+    "Gesundheit": "Health and healthcare",
+    "Wirtschaft": "Economic concerns",
+    "Digitalisierung": "Digital transformation topics",
+    "Sicherheit": "Security and safety issues"
+  }
+}
