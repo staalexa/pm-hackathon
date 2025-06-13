@@ -4,11 +4,15 @@ import geopandas as gpd
 import folium
 from streamlit_folium import st_folium
 
+# Use wide layout for full-width map
+st.set_page_config(page_title='Issue Map Visualization', layout='wide')
+
 # Title
 st.title('Issue Map Visualization')
 
 # Sidebar filters
 st.sidebar.header('Filters')
+
 
 # Load issues data
 @st.cache_data
@@ -18,6 +22,7 @@ def get_data():
     age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
     genders = sorted(df_issues['gender'].dropna().unique().tolist())
     return df_issues, categories, age_groups, genders
+
 
 # Get data and filter options
 df_issues, categories, age_groups, genders = get_data()
@@ -30,6 +35,8 @@ selected_genders = st.sidebar.multiselect('Gender', options=['All'] + genders, d
 # Textbox search for municipality
 search_municipality = st.sidebar.text_input('Search Municipality')
 
+
+# Filter function
 @st.cache_data
 def do_filter_data(categories, ages, genders):
     filtered = df_issues.copy()
@@ -41,10 +48,11 @@ def do_filter_data(categories, ages, genders):
         filtered = filtered[filtered['gender'].isin(genders)]
     return filtered
 
+
 # Apply filters
 temp_filtered = do_filter_data(selected_categories, selected_ages, selected_genders)
 
-# If search text provided, further filter by municipality and show descriptions
+# Show matched descriptions if municipality search provided
 if search_municipality:
     matched = temp_filtered[temp_filtered['municipality'].str.contains(search_municipality, case=False, na=False)]
     st.sidebar.markdown('### Matched Descriptions')
@@ -54,7 +62,7 @@ if search_municipality:
     else:
         st.sidebar.write(f'No issues found for "{search_municipality}".')
 
-# Final issues DataFrame for mapping
+# Final filtered issues for mapping
 filtered_issues = temp_filtered.copy()
 
 # Define shapefile layers
@@ -77,18 +85,19 @@ layers = {
 }
 
 # Initialize folium map
-tile_layer = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=True)
-folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(tile_layer)
+m = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=True)
+folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(m)
 
 # Ensure full opacity
-st.markdown("""
-<style>
-    * { opacity: 100% !important; }
-</style>
-""", unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+        * { opacity: 100% !important; }
+    </style>
+    """, unsafe_allow_html=True)
 
-# Process each layer
-for name, params in layers.items():
+# Aggregate and add layers
+for layer_name, params in layers.items():
     gdf = gpd.read_file(params['shp_path']).to_crs('EPSG:4326')
     count_df = (
         filtered_issues
@@ -96,18 +105,23 @@ for name, params in layers.items():
         .size()
         .reset_index(name='issue_count')
     )
-    merged = gdf.merge(count_df, left_on=params['admin_col'], right_on=params['issues_col'], how='left')
+    merged = gdf.merge(
+        count_df,
+        left_on=params['admin_col'],
+        right_on=params['issues_col'],
+        how='left'
+    )
     merged['issue_count'] = merged['issue_count'].fillna(0).astype(int)
 
-    # Drop datetime columns if any
+    # Drop any datetime columns
     datetime_cols = merged.select_dtypes(include=['datetime64[ns]']).columns
-    if datetime_cols.any():
+    if len(datetime_cols) > 0:
         merged = merged.drop(columns=datetime_cols)
 
-    # Create choropleth
-    c = folium.Choropleth(
+    # Create choropleth layer
+    choropleth = folium.Choropleth(
         geo_data=merged.to_json(),
-        name=name,
+        name=layer_name,
         data=merged,
         columns=[params['admin_col'], 'issue_count'],
         key_on=f'feature.properties.{params['admin_col']}',
@@ -116,19 +130,19 @@ for name, params in layers.items():
         line_opacity=0.2,
         overlay=True,
         control=True,
-        show=(name == 'States'),
+        show=(layer_name == 'States'),
         highlight=True
-    ).add_to(tile_layer)
-
+    ).add_to(m)
     # Hide default legend
-    tile_layer.get_root().html.add_child(folium.Element("""
-      <style>
-        .legend { display: none !important; }
-      </style>
-    """))
-
-    # Add tooltip
-    c.geojson.add_child(
+    m.get_root().html.add_child(folium.Element(
+        """
+        <style>
+            .legend { display: none !important; }
+        </style>
+        """
+    ))
+    # Attach tooltip
+    choropleth.geojson.add_child(
         folium.GeoJsonTooltip(
             fields=[params['admin_col'], 'issue_count'],
             aliases=[f'{params['admin_col']}:', 'Issues:'],
@@ -137,8 +151,9 @@ for name, params in layers.items():
         )
     )
 
-# Layer control
-folium.LayerControl(collapsed=False, position='topright').add_to(tile_layer)
+# Add layer control
+event_layer = folium.LayerControl(collapsed=False, position='topright')
+event_layer.add_to(m)
 
-# Render map
-st_data = st_folium(tile_layer, width=700, height=500)
+# Render the map full-width in the main area
+st_folium(m, height=600, width=1000)
