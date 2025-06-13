@@ -86,7 +86,7 @@ layers = {
 
 # Initialize folium map
 m = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=True)
-folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(m)
+folium.TileLayer('cartodbdark_matter', name='World Map', overlay=True, control=False).add_to(m)
 
 # Ensure full opacity
 st.markdown(
@@ -125,7 +125,7 @@ for layer_name, params in layers.items():
         data=merged,
         columns=[params['admin_col'], 'issue_count'],
         key_on=f'feature.properties.{params['admin_col']}',
-        fill_color='YlOrRd',
+        fill_color='YlGnBu',
         fill_opacity=0.7,
         line_opacity=0.2,
         overlay=True,
