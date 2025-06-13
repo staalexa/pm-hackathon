@@ -11,22 +11,20 @@ st.title('Issue Map Visualization')
 st.sidebar.header('Filters')
 
 # Load issues data
-issues_df = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
+df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
 
 # Prepare filter options
-categories = sorted(issues_df['category'].dropna().unique())
-age_groups = sorted(issues_df['age_group'].dropna().unique())
-categories = ['All'] + categories
-age_groups = ['All'] + age_groups
+categories = ['All'] + sorted(df_issues['category'].dropna().unique().tolist())
+age_groups = ['All'] + sorted(df_issues['age_group'].dropna().unique().tolist())
 selected_category = st.sidebar.selectbox('Category', categories)
 selected_age = st.sidebar.selectbox('Age Group', age_groups)
 
 # Filter data
-filtered_df = issues_df.copy()
+filtered_issues = df_issues.copy()
 if selected_category != 'All':
-    filtered_df = filtered_df[filtered_df['category'] == selected_category]
+    filtered_issues = filtered_issues[filtered_issues['category'] == selected_category]
 if selected_age != 'All':
-    filtered_df = filtered_df[filtered_df['age_group'] == selected_age]
+    filtered_issues = filtered_issues[filtered_issues['age_group'] == selected_age]
 
 # Define shapefile layers
 layers = {
@@ -52,20 +50,20 @@ m = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=Tr
 # Add world basemap
 folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(m)
 
-# Add each administrative layer
+# Process each layer
 for layer_name, params in layers.items():
     # Load shapefile and reproject
     gdf = gpd.read_file(params['shp_path']).to_crs('EPSG:4326')
 
     # Aggregate issue counts
     count_df = (
-        filtered_df
+        filtered_issues
         .groupby(params['issues_col'])
         .size()
         .reset_index(name='issue_count')
     )
 
-    # Merge counts into geodataframe
+    # Merge counts into GeoDataFrame
     merged = gdf.merge(
         count_df,
         left_on=params['admin_col'],
@@ -74,13 +72,18 @@ for layer_name, params in layers.items():
     )
     merged['issue_count'] = merged['issue_count'].fillna(0).astype(int)
 
-    # Choropleth overlay
-    folium.Choropleth(
+    # Drop datetime columns to avoid JSON errors
+    datetime_cols = merged.select_dtypes(include=['datetime64[ns]']).columns
+    if len(datetime_cols) > 0:
+        merged = merged.drop(columns=datetime_cols)
+
+    # Create the Choropleth layer and add to map
+    choropleth = folium.Choropleth(
         geo_data=merged.to_json(),
         name=layer_name,
         data=merged,
         columns=[params['admin_col'], 'issue_count'],
-        key_on=f'feature.properties.{params['admin_col']}',
+        key_on=f'feature.properties.{params["admin_col"]}',
         fill_color='YlOrRd',
         fill_opacity=0.7,
         line_opacity=0.2,
@@ -91,19 +94,17 @@ for layer_name, params in layers.items():
         highlight=True
     ).add_to(m)
 
-    # GeoJson with tooltip
-    folium.GeoJson(
-        merged,
-        name=f'{layer_name} Info',
-        tooltip=folium.GeoJsonTooltip(
+    # Attach tooltip to the choropleth's GeoJson sub-layer
+    choropleth.geojson.add_child(
+        folium.GeoJsonTooltip(
             fields=[params['admin_col'], 'issue_count'],
             aliases=[f'{params['admin_col']}:', 'Issues:'],
             localize=True,
             sticky=False
         )
-    ).add_to(m)
+    )
 
-# Layer control
+# Add layer control
 folium.LayerControl(collapsed=False, position='topright').add_to(m)
 
 # Render map in Streamlit
