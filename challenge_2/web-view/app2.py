@@ -13,6 +13,8 @@ st.title('Issue Map Visualization')
 # Sidebar filters
 st.sidebar.header('Filters')
 
+st.logo("static/logo.png", size="large")
+
 
 # Load issues data
 @st.cache_data
@@ -93,6 +95,13 @@ st.markdown(
     """
     <style>
         * { opacity: 100% !important; }
+        img[data-testid="stLogo"] {
+            height: 15vh;
+            margin: 0 auto -30px auto;
+        }
+        .stAppDeployButton {
+            display: none !important;
+        }
     </style>
     """, unsafe_allow_html=True)
 
