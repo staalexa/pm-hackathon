@@ -11,29 +11,39 @@ st.title('Issue Map Visualization')
 st.sidebar.header('Filters')
 
 # Load issues data
-df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
+@st.cache_data
+def get_data():
+    df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
+    categories = sorted(df_issues['category'].dropna().unique().tolist())
+    age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
+    genders = sorted(df_issues['gender'].dropna().unique().tolist())
+    return df_issues, categories, age_groups, genders
 
-# Prepare filter options
-categories = sorted(df_issues['category'].dropna().unique().tolist())
-age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
-genders = sorted(df_issues['gender'].dropna().unique().tolist())
+df_issues, categories, age_groups, genders = get_data()
 
-# Use multiselect to allow multiple picks
 selected_categories = st.sidebar.multiselect('Category', options=['All'] + categories, default=['All'])
 selected_ages = st.sidebar.multiselect('Age Group', options=['All'] + age_groups, default=['All'])
 selected_genders = st.sidebar.multiselect('Gender', options=['All'] + genders, default=['All'])
 
-# Filter data based on selections
-filtered_issues = df_issues.copy()
-# Category filter
-if 'All' not in selected_categories:
-    filtered_issues = filtered_issues[filtered_issues['category'].isin(selected_categories)]
-# Age group filter
-if 'All' not in selected_ages:
-    filtered_issues = filtered_issues[filtered_issues['age_group'].isin(selected_ages)]
-# Gender filter
-if 'All' not in selected_genders:
-    filtered_issues = filtered_issues[filtered_issues['gender'].isin(selected_genders)]
+print("Here1")
+
+@st.cache_data
+def do_filter_data(selected_categories, selected_ages, selected_genders):
+    filtered_issues = df_issues.copy()
+    if 'All' not in selected_categories:
+        filtered_issues = filtered_issues[filtered_issues['category'].isin(selected_categories)]
+    # Age group filter
+    if 'All' not in selected_ages:
+        filtered_issues = filtered_issues[filtered_issues['age_group'].isin(selected_ages)]
+    # Gender filter
+    if 'All' not in selected_genders:
+        filtered_issues = filtered_issues[filtered_issues['gender'].isin(selected_genders)]
+
+    return filtered_issues
+
+filtered_issues = do_filter_data(selected_categories, selected_ages, selected_genders)
+
+print("Here2")
 
 # Define shapefile layers
 layers = {
@@ -68,6 +78,8 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
+
+print("Here3")
 
 # Process each layer and add to map
 for layer_name, params in layers.items():
