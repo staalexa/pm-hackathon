@@ -20,7 +20,6 @@ st.logo("static/logo.png", size="large")
 @st.cache_data
 def get_data():
     df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
-    # Ensure date column is datetime
     df_issues['date'] = pd.to_datetime(df_issues['date'], errors='coerce')
     categories = sorted(df_issues['category'].dropna().unique().tolist())
     age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
@@ -39,6 +38,17 @@ selected_dates = st.sidebar.date_input(
     min_value=min_date,
     max_value=max_date
 )
+# Normalize selected start/end dates
+def normalize_dates(sel):
+    if isinstance(sel, (list, tuple)) and len(sel) == 2:
+        start, end = sel
+    else:
+        start, end = min_date, max_date
+    if start > end:
+        start, end = end, start
+    return start, end
+
+start_date, end_date = normalize_dates(selected_dates)
 
 # Other filters
 selected_categories = st.sidebar.multiselect('Category', options=['All'] + categories, default=['All'])
@@ -49,23 +59,14 @@ search_municipality = st.sidebar.text_input('Search Municipality')
 # Filter function with date range
 def do_filter_data(categories, ages, genders, date_range):
     filtered = df_issues.copy()
-    # Apply category, age, gender filters
     if 'All' not in categories:
         filtered = filtered[filtered['category'].isin(categories)]
     if 'All' not in ages:
         filtered = filtered[filtered['age_group'].isin(ages)]
     if 'All' not in genders:
         filtered = filtered[filtered['gender'].isin(genders)]
-    # Apply date range filter if two dates provided
-    if date_range and len(date_range) == 2:
-        start_date, end_date = date_range
-        # Ensure start_date <= end_date
-        if start_date > end_date:
-            start_date, end_date = end_date, start_date
-        filtered = filtered[
-            (filtered['date'].dt.date >= start_date) &
-            (filtered['date'].dt.date <= end_date)
-        ]
+    sd, ed = normalize_dates(date_range)
+    filtered = filtered[(filtered['date'].dt.date >= sd) & (filtered['date'].dt.date <= ed)]
     return filtered
 
 # Apply filters
@@ -86,21 +87,9 @@ filtered_issues = temp_filtered.copy()
 
 # Define shapefile layers
 layers = {
-    'Municipalities': {
-        'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_GEM.shp',
-        'admin_col': 'GEN',
-        'issues_col': 'municipality'
-    },
-    'Districts': {
-        'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_KRS.shp',
-        'admin_col': 'GEN',
-        'issues_col': 'district'
-    },
-    'States': {
-        'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_LAN.shp',
-        'admin_col': 'GEN',
-        'issues_col': 'state'
-    },
+    'Municipalities': {'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_GEM.shp', 'admin_col': 'GEN', 'issues_col': 'municipality'},
+    'Districts': {'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_KRS.shp', 'admin_col': 'GEN', 'issues_col': 'district'},
+    'States': {'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_LAN.shp', 'admin_col': 'GEN', 'issues_col': 'state'},
 }
 
 # Initialize folium map
@@ -112,74 +101,59 @@ st.markdown(
     """
     <style>
         * { opacity: 100% !important; }
-        img[data-testid="stLogo"] {
-            height: 15vh;
-            margin: 0 auto -30px auto;
-        }
-        .stAppDeployButton {
-            display: none !important;
-        }
+        img[data-testid=\"stLogo\"] { height: 15vh; margin: 0 auto -30px auto; }
+        .stAppDeployButton { display: none !important; }
     </style>
     """, unsafe_allow_html=True)
 
 # Aggregate and add layers
 for layer_name, params in layers.items():
     gdf = gpd.read_file(params['shp_path']).to_crs('EPSG:4326')
-    count_df = (
-        filtered_issues
-        .groupby(params['issues_col'])
-        .size()
-        .reset_index(name='issue_count')
-    )
-    merged = gdf.merge(
-        count_df,
-        left_on=params['admin_col'],
-        right_on=params['issues_col'],
-        how='left'
-    )
+    count_df = filtered_issues.groupby(params['issues_col']).size().reset_index(name='issue_count')
+    merged = gdf.merge(count_df, left_on=params['admin_col'], right_on=params['issues_col'], how='left')
     merged['issue_count'] = merged['issue_count'].fillna(0).astype(int)
-
-    # Drop any datetime columns
     datetime_cols = merged.select_dtypes(include=['datetime64[ns]']).columns
-    if len(datetime_cols) > 0:
-        merged = merged.drop(columns=datetime_cols)
-
-    # Create choropleth layer
+    if len(datetime_cols): merged = merged.drop(columns=datetime_cols)
     choropleth = folium.Choropleth(
-        geo_data=merged.to_json(),
-        name=layer_name,
-        data=merged,
-        columns=[params['admin_col'], 'issue_count'],
-        key_on=f'feature.properties.{params['admin_col']}',
-        fill_color='YlGnBu',
-        fill_opacity=0.7,
-        line_opacity=0.2,
-        overlay=True,
-        control=True,
-        show=(layer_name == 'States'),
-        highlight=True
+        geo_data=merged.to_json(), name=layer_name, data=merged,
+        columns=[params['admin_col'], 'issue_count'], key_on=f'feature.properties.{params['admin_col']}',
+        fill_color='YlGnBu', fill_opacity=0.7, line_opacity=0.2, overlay=True, control=True,
+        show=(layer_name=='States'), highlight=True
     ).add_to(m)
-    # Hide default legend
-    m.get_root().html.add_child(folium.Element(
-        """
-        <style>
-            .legend { display: none !important; }
-        </style>
-        """
+    m.get_root().html.add_child(folium.Element("<style>.legend{display:none!important;}</style>"))
+    choropleth.geojson.add_child(folium.GeoJsonTooltip(
+        fields=[params['admin_col'], 'issue_count'],
+        aliases=[f'{params['admin_col']}:', 'Issues:'],
+        localize=True,
+        sticky=False
     ))
-    # Attach tooltip
-    choropleth.geojson.add_child(
-        folium.GeoJsonTooltip(
-            fields=[params['admin_col'], 'issue_count'],
-            aliases=[f'{params['admin_col']}:', 'Issues:'],
-            localize=True,
-            sticky=False
-        )
-    )
 
 # Add layer control
 event_layer = folium.LayerControl(collapsed=False, position='topright')
 event_layer.add_to(m)
 
-# Render the map full-width in the main area
+# Render the map full-width
 st_folium(m, height=600, width=1000)
+
+# --- Municipality Cumulative Trend Plot ---
+st.markdown('---')
+st.subheader('Cumulative Issue Trend for Municipality')
+mun_input = st.text_input('Enter a municipality to view cumulative trend')
+if mun_input:
+    # Filter by municipality and selected date range
+    trend_df = df_issues[
+        df_issues['municipality'].str.contains(mun_input, case=False, na=False)
+    ]
+    trend_df = trend_df[
+        (trend_df['date'].dt.date >= start_date) &
+        (trend_df['date'].dt.date <= end_date)
+    ]
+    if not trend_df.empty:
+        # Aggregate daily counts and compute cumulative sum
+        daily_counts = trend_df.groupby(trend_df['date'].dt.date).size().reindex(
+            pd.date_range(start_date, end_date), fill_value=0
+        )
+        cumulative_counts = daily_counts.cumsum()
+        st.line_chart(cumulative_counts)
+    else:
+        st.write(f'No issues found for "{mun_input}" in the selected date range.')
