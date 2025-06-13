@@ -38,6 +38,7 @@ selected_dates = st.sidebar.date_input(
     min_value=min_date,
     max_value=max_date
 )
+
 # Normalize selected start/end dates
 def normalize_dates(sel):
     if isinstance(sel, (list, tuple)) and len(sel) == 2:
@@ -77,8 +78,10 @@ if search_municipality:
     matched = temp_filtered[temp_filtered['municipality'].str.contains(search_municipality, case=False, na=False)]
     st.sidebar.markdown('### Matched Descriptions')
     if not matched.empty:
-        for desc in matched['description']:
-            st.sidebar.write(f'- {desc}')
+        for _, row in matched.iterrows():
+            # Display date and description together
+            date_str = row['date'].date().isoformat() if not pd.isna(row['date']) else 'Unknown date'
+            st.sidebar.write(f'- {date_str}: {row["description"]}')
     else:
         st.sidebar.write(f'No issues found for "{search_municipality}".')
 
