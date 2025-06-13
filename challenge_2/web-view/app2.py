@@ -87,12 +87,17 @@ for layer_name, params in layers.items():
         fill_color='YlOrRd',
         fill_opacity=0.7,
         line_opacity=0.2,
-        legend_name=layer_name,
         overlay=True,
         control=True,
         show=(layer_name == 'States'),
         highlight=True
     ).add_to(m)
+
+    m.get_root().html.add_child(folium.Element("""
+      <style>
+        .legend { display: none !important; }
+      </style>
+    """))
 
     # Attach tooltip to the choropleth's GeoJson sub-layer
     choropleth.geojson.add_child(
@@ -102,6 +107,17 @@ for layer_name, params in layers.items():
             localize=True,
             sticky=False
         )
+    )
+
+    st.markdown(
+        """
+    <style>
+        * {
+            opacity: 100% !important;
+        }
+    </style>
+    """,
+        unsafe_allow_html=True,
     )
 
 # Add layer control
