@@ -13,46 +13,63 @@ st.title('Issue Map Visualization')
 # Sidebar filters
 st.sidebar.header('Filters')
 
+# Display logo
 st.logo("static/logo.png", size="large")
 
-
-# Load issues data
+# Load issues data, parsing dates
 @st.cache_data
 def get_data():
     df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
+    # Ensure date column is datetime
+    df_issues['date'] = pd.to_datetime(df_issues['date'], errors='coerce')
     categories = sorted(df_issues['category'].dropna().unique().tolist())
     age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
     genders = sorted(df_issues['gender'].dropna().unique().tolist())
     return df_issues, categories, age_groups, genders
 
-
 # Get data and filter options
 df_issues, categories, age_groups, genders = get_data()
 
-# Multiselect filters
+# Date filter: select a range
+min_date = df_issues['date'].min().date()
+max_date = df_issues['date'].max().date()
+selected_dates = st.sidebar.date_input(
+    'Submission Date Range',
+    value=(min_date, max_date),
+    min_value=min_date,
+    max_value=max_date
+)
+
+# Other filters
 selected_categories = st.sidebar.multiselect('Category', options=['All'] + categories, default=['All'])
 selected_ages = st.sidebar.multiselect('Age Group', options=['All'] + age_groups, default=['All'])
 selected_genders = st.sidebar.multiselect('Gender', options=['All'] + genders, default=['All'])
-
-# Textbox search for municipality
 search_municipality = st.sidebar.text_input('Search Municipality')
 
-
-# Filter function
-@st.cache_data
-def do_filter_data(categories, ages, genders):
+# Filter function with date range
+def do_filter_data(categories, ages, genders, date_range):
     filtered = df_issues.copy()
+    # Apply category, age, gender filters
     if 'All' not in categories:
         filtered = filtered[filtered['category'].isin(categories)]
     if 'All' not in ages:
         filtered = filtered[filtered['age_group'].isin(ages)]
     if 'All' not in genders:
         filtered = filtered[filtered['gender'].isin(genders)]
+    # Apply date range filter if two dates provided
+    if date_range and len(date_range) == 2:
+        start_date, end_date = date_range
+        # Ensure start_date <= end_date
+        if start_date > end_date:
+            start_date, end_date = end_date, start_date
+        filtered = filtered[
+            (filtered['date'].dt.date >= start_date) &
+            (filtered['date'].dt.date <= end_date)
+        ]
     return filtered
 
-
 # Apply filters
-temp_filtered = do_filter_data(selected_categories, selected_ages, selected_genders)
+temp_filtered = do_filter_data(selected_categories, selected_ages, selected_genders, selected_dates)
 
 # Show matched descriptions if municipality search provided
 if search_municipality:
