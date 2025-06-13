@@ -83,6 +83,8 @@ def index():
         control=False  # so it never shows up in the layer list
     ).add_to(m)
 
+    print("Before for loop")
+
     # 3) for each admin-level, merge counts & add as a togglable overlay
     for layer_name, params in layers.items():
         # load & reproject
@@ -124,23 +126,19 @@ def index():
 
         ).add_to(m)
 
-        # Count issues per state
-        issues_per_state = (
-            issues_df.groupby('state')
+        gdf = gpd.read_file(params['shp_path']).to_crs("EPSG:4326")
+
+        # count & merge
+        count_df = (
+            issues_df
+            .groupby(params['issues_col'])
             .size()
             .reset_index(name='issue_count')
         )
-
-        states = gpd.read_file(
-            "../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_LAN.shp"
-        ).to_crs("EPSG:4326")
-
-
-        # Merge
-        states_with_data = states.merge(
-            issues_per_state,
-            left_on='GEN',
-            right_on='state',
+        states_with_data = gdf.merge(
+            count_df,
+            left_on=params['admin_col'],
+            right_on=params['issues_col'],
             how='left'
         )
 
@@ -154,13 +152,17 @@ def index():
             tooltip=folium.features.GeoJsonTooltip(
                 fields=['GEN', 'issue_count'],
                 aliases=['State:', 'Issues:'],
-                localize=True
+                localize=True,
+                interactive=True
             )
         ).add_to(m)
+
+        print("Geos")
 
 
     # 4) final layer control (only your overlays will appear)
     folium.LayerControl(collapsed=False, position='topright').add_to(m)
+    print("Somne contraol")
 
     # Render the map as HTML string
     map_html = m._repr_html_()
