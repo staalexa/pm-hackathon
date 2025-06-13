@@ -19,31 +19,43 @@ def get_data():
     genders = sorted(df_issues['gender'].dropna().unique().tolist())
     return df_issues, categories, age_groups, genders
 
+# Get data and filter options
 df_issues, categories, age_groups, genders = get_data()
 
+# Multiselect filters
 selected_categories = st.sidebar.multiselect('Category', options=['All'] + categories, default=['All'])
 selected_ages = st.sidebar.multiselect('Age Group', options=['All'] + age_groups, default=['All'])
 selected_genders = st.sidebar.multiselect('Gender', options=['All'] + genders, default=['All'])
 
-print("Here1")
+# Textbox search for municipality
+search_municipality = st.sidebar.text_input('Search Municipality')
 
 @st.cache_data
-def do_filter_data(selected_categories, selected_ages, selected_genders):
-    filtered_issues = df_issues.copy()
-    if 'All' not in selected_categories:
-        filtered_issues = filtered_issues[filtered_issues['category'].isin(selected_categories)]
-    # Age group filter
-    if 'All' not in selected_ages:
-        filtered_issues = filtered_issues[filtered_issues['age_group'].isin(selected_ages)]
-    # Gender filter
-    if 'All' not in selected_genders:
-        filtered_issues = filtered_issues[filtered_issues['gender'].isin(selected_genders)]
+def do_filter_data(categories, ages, genders):
+    filtered = df_issues.copy()
+    if 'All' not in categories:
+        filtered = filtered[filtered['category'].isin(categories)]
+    if 'All' not in ages:
+        filtered = filtered[filtered['age_group'].isin(ages)]
+    if 'All' not in genders:
+        filtered = filtered[filtered['gender'].isin(genders)]
+    return filtered
 
-    return filtered_issues
+# Apply filters
+temp_filtered = do_filter_data(selected_categories, selected_ages, selected_genders)
 
-filtered_issues = do_filter_data(selected_categories, selected_ages, selected_genders)
+# If search text provided, further filter by municipality and show descriptions
+if search_municipality:
+    matched = temp_filtered[temp_filtered['municipality'].str.contains(search_municipality, case=False, na=False)]
+    st.sidebar.markdown('### Matched Descriptions')
+    if not matched.empty:
+        for desc in matched['description']:
+            st.sidebar.write(f'- {desc}')
+    else:
+        st.sidebar.write(f'No issues found for "{search_municipality}".')
 
-print("Here2")
+# Final issues DataFrame for mapping
+filtered_issues = temp_filtered.copy()
 
 # Define shapefile layers
 layers = {
@@ -64,54 +76,38 @@ layers = {
     },
 }
 
-# Initialize folium map without default tiles
-m = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=True)
-# Add world basemap
-folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(m)
+# Initialize folium map
+tile_layer = folium.Map(location=[51.0, 10.0], zoom_start=6, tiles=None, control_scale=True)
+folium.TileLayer('OpenStreetMap', name='World Map', overlay=True, control=False).add_to(tile_layer)
 
-# Inject CSS once for full opacity
-st.markdown(
-    """
+# Ensure full opacity
+st.markdown("""
 <style>
     * { opacity: 100% !important; }
 </style>
-""",
-    unsafe_allow_html=True,
-)
+""", unsafe_allow_html=True)
 
-print("Here3")
-
-# Process each layer and add to map
-for layer_name, params in layers.items():
-    # Load shapefile and reproject
+# Process each layer
+for name, params in layers.items():
     gdf = gpd.read_file(params['shp_path']).to_crs('EPSG:4326')
-
-    # Aggregate issue counts by administrative unit
     count_df = (
         filtered_issues
         .groupby(params['issues_col'])
         .size()
         .reset_index(name='issue_count')
     )
-
-    # Merge counts into GeoDataFrame
-    merged = gdf.merge(
-        count_df,
-        left_on=params['admin_col'],
-        right_on=params['issues_col'],
-        how='left'
-    )
+    merged = gdf.merge(count_df, left_on=params['admin_col'], right_on=params['issues_col'], how='left')
     merged['issue_count'] = merged['issue_count'].fillna(0).astype(int)
 
-    # Drop any datetime columns to avoid JSON serialization errors
+    # Drop datetime columns if any
     datetime_cols = merged.select_dtypes(include=['datetime64[ns]']).columns
-    if len(datetime_cols) > 0:
+    if datetime_cols.any():
         merged = merged.drop(columns=datetime_cols)
 
-    # Create the Choropleth layer
-    choropleth = folium.Choropleth(
+    # Create choropleth
+    c = folium.Choropleth(
         geo_data=merged.to_json(),
-        name=layer_name,
+        name=name,
         data=merged,
         columns=[params['admin_col'], 'issue_count'],
         key_on=f'feature.properties.{params['admin_col']}',
@@ -120,19 +116,19 @@ for layer_name, params in layers.items():
         line_opacity=0.2,
         overlay=True,
         control=True,
-        show=(layer_name == 'States'),
+        show=(name == 'States'),
         highlight=True
-    ).add_to(m)
+    ).add_to(tile_layer)
 
-    # Hide default choropleth legend
-    m.get_root().html.add_child(folium.Element("""
+    # Hide default legend
+    tile_layer.get_root().html.add_child(folium.Element("""
       <style>
         .legend { display: none !important; }
       </style>
     """))
 
-    # Attach tooltip for interactivity
-    choropleth.geojson.add_child(
+    # Add tooltip
+    c.geojson.add_child(
         folium.GeoJsonTooltip(
             fields=[params['admin_col'], 'issue_count'],
             aliases=[f'{params['admin_col']}:', 'Issues:'],
@@ -141,8 +137,8 @@ for layer_name, params in layers.items():
         )
     )
 
-# Add layer control
-folium.LayerControl(collapsed=False, position='topright').add_to(m)
+# Layer control
+folium.LayerControl(collapsed=False, position='topright').add_to(tile_layer)
 
-# Render map in Streamlit
-st_data = st_folium(m, width=700, height=500)
+# Render map
+st_data = st_folium(tile_layer, width=700, height=500)
