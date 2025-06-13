@@ -16,10 +16,12 @@ df_issues = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
 # Prepare filter options
 categories = sorted(df_issues['category'].dropna().unique().tolist())
 age_groups = sorted(df_issues['age_group'].dropna().unique().tolist())
+genders = sorted(df_issues['gender'].dropna().unique().tolist())
 
 # Use multiselect to allow multiple picks
 selected_categories = st.sidebar.multiselect('Category', options=['All'] + categories, default=['All'])
 selected_ages = st.sidebar.multiselect('Age Group', options=['All'] + age_groups, default=['All'])
+selected_genders = st.sidebar.multiselect('Gender', options=['All'] + genders, default=['All'])
 
 # Filter data based on selections
 filtered_issues = df_issues.copy()
@@ -29,8 +31,11 @@ if 'All' not in selected_categories:
 # Age group filter
 if 'All' not in selected_ages:
     filtered_issues = filtered_issues[filtered_issues['age_group'].isin(selected_ages)]
+# Gender filter
+if 'All' not in selected_genders:
+    filtered_issues = filtered_issues[filtered_issues['gender'].isin(selected_genders)]
 
-# Define shapefile layers\
+# Define shapefile layers
 layers = {
     'Municipalities': {
         'shp_path': '../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_GEM.shp',
