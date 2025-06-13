@@ -37,6 +37,9 @@
           {% for cat in categories %}
             <option value="{{ cat }}" {% if cat == selected_category %}selected{% endif %}>{{ cat }}</option>
           {% endfor %}
+          {% for cat in age_groups %}
+            <option value="{{ cat }}" {% if cat == selected_age %}selected{% endif %}>{{ cat }}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="col-auto">

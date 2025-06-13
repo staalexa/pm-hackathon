@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     selected_category = request.args.get('category', default='')
+    selected_age = request.args.get('age', default='')
     # 0) define your shapefile layers and join columns
     layers = {
         'Municipalities': {
@@ -51,9 +52,12 @@ def index():
     # 1) load your issues data
     issues_df = pd.read_csv('../../data/challenge_2/complete_issues_data.csv')
     categories = sorted(issues_df['category'].dropna().unique())
+    age_groups = sorted(issues_df['age_group'].dropna().unique())
 
     if selected_category:
         issues_df = issues_df.loc[issues_df['category'] == selected_category]
+    if selected_age:
+        issues_df = issues_df.loc[issues_df['age_group'] == selected_age]
 
 
     # # 2) build map with a single base-layer
@@ -112,11 +116,46 @@ def index():
             fill_color='YlOrRd',
             fill_opacity=0.7,
             line_opacity=0.2,
-            legend_name='Number of Issues',
+            legend_name=layer_name,
             overlay=False,
             control=True,
-            show=(layer_name == "States")
-            # highlight=True
+            show=(layer_name == "States"),
+            highlight=True
+
+        ).add_to(m)
+
+        # Count issues per state
+        issues_per_state = (
+            issues_df.groupby('state')
+            .size()
+            .reset_index(name='issue_count')
+        )
+
+        states = gpd.read_file(
+            "../../vg5000_12-31.gk3.shape.ebenen/vg5000_ebenen_1231/VG5000_LAN.shp"
+        ).to_crs("EPSG:4326")
+
+
+        # Merge
+        states_with_data = states.merge(
+            issues_per_state,
+            left_on='GEN',
+            right_on='state',
+            how='left'
+        )
+
+        datetime_cols = states_with_data.select_dtypes(['datetime64[ns]']).columns
+        states_for_map = states_with_data.drop(columns=datetime_cols)[['GEN', 'issue_count', 'geometry']]
+        states_for_map['issue_count'] = states_for_map['issue_count'].fillna(0).astype(int)
+
+        folium.features.GeoJson(
+            states_for_map,
+            name='State Info',
+            tooltip=folium.features.GeoJsonTooltip(
+                fields=['GEN', 'issue_count'],
+                aliases=['State:', 'Issues:'],
+                localize=True
+            )
         ).add_to(m)
 
 
@@ -129,6 +168,7 @@ def index():
             'index.html',
             map_html=map_html,
             categories=categories,
+            age_groups=age_groups,
             selected_category=selected_category
         )
 
